@@ -493,6 +493,7 @@ textarea {
     }
     &__menu {
         ul {
+            padding: 0;
             display: flex;
             align-items: center;
             list-style: none;
@@ -533,12 +534,18 @@ textarea {
         align-items: center;
         margin-right: 38px;
         @media all and (max-width: 1280px) {
+            margin-right: 0px;
+        }
+        @media all and (max-width: 1023px) {
             display: none;
         }
         a {
             margin-right: 22px;
             display: block;
             font-size: 0;
+            @media all and (max-width: 1280px) {
+                margin-right: 10px;
+            }
             svg {
                 path {
                     transition: all .3s ease-out;
@@ -695,12 +702,12 @@ textarea {
 .main_first {
     background: #ECE6E6;
     padding-bottom: 120px;
-    @media all and (max-width: 1580px) {
+    @media all and (max-width: 1365px) {
         padding-bottom: 30px;
     }
     &__l-side {
         width: 50%;
-        @media all and (max-width: 1580px) {
+        @media all and (max-width: 1365px) {
             width: 100%;
             margin-bottom: 30px;
         }
@@ -708,7 +715,7 @@ textarea {
     &__r-side {
         width: 50%;
         position: relative;
-        @media all and (max-width: 1580px) {
+        @media all and (max-width: 1365px) {
             width: 100%;
             text-align: center;
         }
@@ -720,7 +727,7 @@ textarea {
             position: absolute;
             pointer-events: none;
             background: url("data:image/svg+xml,%3Csvg width='600' height='600' viewBox='0 0 600 600' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='300' cy='300' r='222' stroke='%23DD7A69' stroke-width='156'/%3E%3C/svg%3E%0A") 75% 30% / 600px no-repeat;
-            @media all and (max-width: 1580px) {
+            @media all and (max-width: 1365px) {
                 background-position: 50% 50%;
                 left: 0;
                 right: 0;
@@ -737,7 +744,7 @@ textarea {
         align-items: center;
         justify-content: space-between;
         margin-top: 92px;
-        @media all and (max-width: 1580px) {
+        @media all and (max-width: 1365px) {
             flex-direction: column;
             display: flex;
             overflow: hidden;
@@ -786,7 +793,7 @@ textarea {
             background: url("data:image/svg+xml,%3Csvg width='933' height='32' viewBox='0 0 933 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 31C1 31 361.807 31 621.167 31C648.667 31 657.383 1 684.883 1C712.383 1 721.099 31 748.599 31C842.548 31 932 31 932 31' stroke='%231C2023' stroke-linecap='round'/%3E%3C/svg%3E%0A") 0 no-repeat;
             background-position-x: 150%;
             position: absolute;
-            @media all and (max-width: 1580px) {
+            @media all and (max-width: 1365px) {
                 background-position-x: 0;
                 margin-left: -20px;
             }
@@ -826,7 +833,11 @@ textarea {
         width: 100%;
         margin-left: auto;
         @media all and (max-width: 1580px) {
+            margin-left: 0;
+        }
+        @media all and (max-width: 1365px) {
             margin-right: auto;
+            margin-left: auto;
             max-width: 700px;
         }
         @media all and (max-width: 920px) {
