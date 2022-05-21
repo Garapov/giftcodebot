@@ -444,7 +444,8 @@ textarea {
         border-bottom: 2px solid transparent;
         transition: all .3s ease-out; }
         .header__menu ul li a:hover {
-          border-color: #1C2023; }
+          border-color: #D26351;
+          color: #D26351; }
   @media all and (max-width: 1023px) {
     .header__menu {
       display: none; } }
@@ -778,7 +779,12 @@ textarea {
   .main_first__itm {
     position: relative;
     z-index: 1;
-    padding: 30px; }
+    padding: 30px;
+    background: rgba(167, 167, 167, 0.2);
+    border-radius: 20px; }
+    @media all and (max-width: 920px) {
+      .main_first__itm {
+        border-radius: 8px; } }
     @media all and (max-width: 920px) {
       .main_first__itm {
         padding: 12px;
@@ -788,7 +794,6 @@ textarea {
       width: 100%;
       height: 100%;
       background: linear-gradient(270.01deg, rgba(255, 255, 255, 0) 37.68%, rgba(255, 255, 255, 0.25) 99.99%);
-      backdrop-filter: blur(30px);
       position: absolute;
       left: 0;
       right: 0;
@@ -801,12 +806,15 @@ textarea {
       @media all and (max-width: 920px) {
         .main_first__itm:before {
           border-radius: 8px; } }
+      @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .main_first__itm:before {
+          -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px); } }
     .main_first__itm:after {
       content: '';
       width: 100%;
       height: 100%;
-      background: linear-gradient(270.01deg, rgba(255, 255, 255, 0) 37.68%, rgba(255, 255, 255, 0.25) 99.99%);
-      backdrop-filter: blur(30px);
+      background: rgba(167, 167, 167, 0.2);
       position: absolute;
       left: 0;
       right: 0;
@@ -819,6 +827,10 @@ textarea {
       @media all and (max-width: 920px) {
         .main_first__itm:after {
           border-radius: 8px; } }
+      @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .main_first__itm:after {
+          -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px); } }
   .main_first__img {
     width: 83px;
     height: 103px;

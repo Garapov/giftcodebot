@@ -515,7 +515,8 @@ textarea {
                     border-bottom: 2px solid transparent;
                     transition: all .3s ease-out;
                     &:hover {
-                        border-color: #1C2023;
+                        border-color: #D26351;
+                        color: #D26351;
                     }
                 }
             }
@@ -916,6 +917,11 @@ textarea {
         position: relative;
         z-index: 1;
         padding: 30px;
+        background: rgba(167, 167, 167, 0.2);
+        border-radius: 20px;
+        @media all and (max-width: 920px) {
+            border-radius: 8px;
+        }
         @media all and (max-width: 920px) {
             padding: 12px;
             border-radius: 8px;
@@ -925,7 +931,6 @@ textarea {
             width: 100%;
             height: 100%;
             background: linear-gradient(270.01deg, rgba(255, 255, 255, 0) 37.68%, rgba(255, 255, 255, 0.25) 99.99%);
-            backdrop-filter: blur(30px);
             position: absolute;
             left: 0;
             right: 0;
@@ -938,13 +943,16 @@ textarea {
             @media all and (max-width: 920px) {
                 border-radius: 8px;
             }
+            @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+                -webkit-backdrop-filter: blur(30px);
+                backdrop-filter: blur(30px);
+            }
         }
         &:after {
             content: '';
             width: 100%;
             height: 100%;
-            background: linear-gradient(270.01deg, rgba(255, 255, 255, 0) 37.68%, rgba(255, 255, 255, 0.25) 99.99%);
-            backdrop-filter: blur(30px);
+            background: rgba(167, 167, 167, 0.2);
             position: absolute;
             left: 0;
             right: 0;
@@ -956,6 +964,10 @@ textarea {
             clip-path: polygon(100% 0, 100% 100%, 0 100%);
             @media all and (max-width: 920px) {
                 border-radius: 8px;
+            }
+            @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+                -webkit-backdrop-filter: blur(30px);
+                backdrop-filter: blur(30px);
             }
         }
     }
